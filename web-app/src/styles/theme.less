@@ -2,7 +2,8 @@
 // - `default` Default theme
 // - `dark` Import the official dark less style file
 // - `compact` Import the official compact less style file
-@import '~@delon/theme/theme-default.less';
+@import '@delon/theme/theme-default.less';
+@import "node_modules/ng-zorro-antd/code-editor/style/entry.less";
 
 // ==========The following is the custom theme variable area==========
 // The theme parameters can be generated at https://ng-alain.github.io/ng-alain/
@@ -66,4 +67,30 @@
   display: flex;
   justify-content: center;
   float: none;
+}
+
+.ant-tabs-content-holder {
+  flex: auto;
+  min-width: 0;
+  min-height: 0;
+  overflow-x: auto;
+}
+
+.hoverClass {
+  &:hover {
+    transform: scale(114%);
+    transition: 0.2s;
+  }
+}
+
+.ant-divider-horizontal {
+  margin: 12px 0;
+}
+
+.sidebar-nav__sub-arrow::before, .sidebar-nav__sub-arrow::after {
+  height: 2.5px
+}
+
+.content_bg_color {
+  background-color: white;
 }
